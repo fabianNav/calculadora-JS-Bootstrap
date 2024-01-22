@@ -5,13 +5,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 /* //TODO SUMA */
 .signo {
     display: inline-block;
     margin-left: 2px;
     margin-right: 2px;
 }
-
 #sumar {
     justify-content: center;
     margin-left: 10px;
@@ -20,7 +20,6 @@
     padding-right: 10px;
     padding-left: 10px;
 }
-
 #resultadoSuma {
     align-self: center;
     margin-left: 10px;
@@ -31,38 +30,31 @@
     background-color: rgba(81, 0, 255, 0.696);
     color: white;
 }
-
 .sumarContainer {
     border: 1px solid #000;
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     animation: gradient 15s ease infinite;
     margin-top: 20px;
 }
-
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
     }
-
     50% {
         background-position: 100% 50%;
     }
-
     100% {
         background-position: 0% 50%;
     }
 }
-
 .sumarContainer header {
     margin-bottom: 3px;
     display: block;
 }
-
 .danceTop {
     animation-name: danceTop;
     transform-origin: top
 }
-
 @keyframes danceTop {
     16% {
         transform: skew(-14deg)
@@ -99,7 +91,6 @@
     padding-right: 10px;
     padding-left: 10px;
 }
-
 #resultadoResta {
     align-self: center;
     margin-left: 10px;
@@ -110,34 +101,28 @@
     background-color: rgba(81, 0, 255, 0.696);
     color: white;
 }
-
 .restaContainer {
     border: 1px solid #000;
     background: linear-gradient(-45deg, #5e1a1a, #1d1f85, #4a9031, #9fb03f);
     animation: gradient 15s ease infinite;
     margin-top: 20px;
 }
-
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
     }
-
     50% {
         background-position: 100% 50%;
     }
-
     100% {
         background-position: 0% 50%;
     }
 }
-
 .restaContainer header {
     margin-bottom: 3px;
     display: block;
     color: white;
 }
-
 .signoBlanco {
     display: inline-block;
     color: white;
@@ -162,7 +147,6 @@
     padding-right: 10px;
     padding-left: 10px;
 }
-
 #resultadoMulti {
     align-self: center;
     margin-left: 10px;
@@ -173,7 +157,6 @@
     background-color: rgba(0, 195, 255, 0.696);
     color: white;
 }
-
 .multiContainer {
     border: 1px solid #000;
     background: linear-gradient(-45deg, #ebfb43, rgb(222, 35, 204), #ed0b0b, #ccda81);
@@ -189,11 +172,56 @@
     0% {
         background-position: 0% 50%;
     }
-
     50% {
         background-position: 100% 50%;
     }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
+/* //TODO DIVISION */
+.leScaleYIn { animation-name: leScaleYIn }
+.hu__hu__ { animation: hu__hu__ infinite 2s ease-in-out }
+@keyframes hu__hu__ {
+    50% { transform: translateY(30px) }
+}
+#dividir {
+    justify-content: center;
+    margin-left: 10px;
+    background-color: blue;
+    color: white;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+#resultadoDivi {
+    align-self: center;
+    margin-left: 10px;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #000000;
+    background-color: rgba(255, 0, 0, 0.857);
+    color: white;
+}
+.diviContainer {
+    border: 1px solid #000;
+    background: linear-gradient(-45deg, #f71add, rgb(225, 143, 143), #fbc40e, #2ef138);
+    animation: gradient 15s ease infinite;
+    margin-top: 20px;
+}
+.diviContainer header {
+    margin-bottom: 3px;
+    display: block;
+    color: black;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
     100% {
         background-position: 0% 50%;
     }
