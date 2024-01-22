@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* //TODO SUMA */
 .signo {
     display: inline-block;
 }
@@ -34,6 +34,7 @@
     border: 1px solid #000;
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     animation: gradient 15s ease infinite;
+    margin-top: 20px;
 }
 
 @keyframes gradient {
@@ -81,3 +82,62 @@
         transform: skew(-4deg)
     }
 }
+
+/* //TODO RESTA */
+.pepe { animation-name: pepe; animation-iteration-count: infinite }
+@keyframes pepe {
+    from, 33%, 66%, to { transform: rotate(4deg) }
+    16%, 50%, 83% { transform: rotate(-4deg) }
+}
+#restar {
+    justify-content: center;
+    margin-left: 10px;
+    background-color: blue;
+    color: white;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#resultadoResta {
+    align-self: center;
+    margin-left: 10px;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #000000;
+    background-color: rgba(81, 0, 255, 0.696);
+    color: white;
+}
+
+.restaContainer {
+    border: 1px solid #000;
+    background: linear-gradient(-45deg, #5e1a1a, #1d1f85, #4a9031, #9fb03f);
+    animation: gradient 15s ease infinite;
+    margin-top: 20px;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.restaContainer header {
+    margin-bottom: 3px;
+    display: block;
+    color: white;
+}
+
+.signoBlanco {
+    display: inline-block;
+    color: white;
+}
+

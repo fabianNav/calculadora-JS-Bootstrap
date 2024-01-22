@@ -1,11 +1,8 @@
 
-
-
-
-
+//TODO SUMA
 let igual = document.getElementById('sumar');
 let resultadoSuma = document.getElementById('resultadoSuma');
-let operadoresSuma = document.getElementsByClassName('operadorSuma').value;
+
 
 function sumar(a, b) {
     return a + b;
@@ -16,3 +13,23 @@ igual.addEventListener('click', () => {
     let bSuma = parseInt(document.getElementById('sumaB').value);
     resultadoSuma.innerHTML = `${JSON.stringify(aSuma + bSuma)}`;
 })
+
+//TODO RESTA
+
+
+
+
+
+
+
+
+
+
+//TODO MULTIPLICACION
+
+
+
+
+
+
+//TODO DIVISION
