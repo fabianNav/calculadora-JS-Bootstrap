@@ -1,0 +1,83 @@
+@import 'bootstrap';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.signo {
+    display: inline-block;
+}
+
+#sumar {
+    justify-content: center;
+    margin-left: 10px;
+    background-color: blue;
+    color: white;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.resultadoSuma {
+    align-self: center;
+    margin-left: 10px;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #000000;
+    background-color: rgba(81, 0, 255, 0.696);
+    color: white;
+}
+
+.sumarContainer {
+    border: 1px solid #000;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.sumarContainer header {
+    margin-bottom: 3px;
+    display: block;
+}
+
+.danceTop {
+    animation-name: danceTop;
+    transform-origin: top
+}
+
+@keyframes danceTop {
+    16% {
+        transform: skew(-14deg)
+    }
+
+    33% {
+        transform: skew(12deg)
+    }
+
+    49% {
+        transform: skew(-8deg)
+    }
+
+    66% {
+        transform: skew(6deg)
+    }
+
+    83% {
+        transform: skew(-4deg)
+    }
+}

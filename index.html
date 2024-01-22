@@ -1,12 +1,36 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculadora</title>
-  </head>
-  <body>
-    
-    
-  </body>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/cssanimation.min.css" rel="stylesheet">
+  <title>Calculadora</title>
+</head>
+
+<body>
+  <header class="d-flex justify-content-center">
+    <h1>Aplicación Calculadora</h1>
+  </header>
+  <main>
+    <div class="container sumarContainer">
+      <header class="cssanimation danceTop d-flex justify-content-center">
+        <h1>SUMAR</h1>
+      </header>
+      <div class="d-flex justify-content-center">
+        <input type="number" placeholder="A" id="sumaA">
+        <h2 class="signo">+</h2>
+        <input type="number" placeholder="B" id="sumaB">
+        <button id="sumar">=</button>
+        <span class="resultadoSuma"></span>
+      </div>
+    </div>
+  </main>
+  <footer>
+
+  </footer>
+</body>
+<script src="main.js"></script>
+
 </html>
