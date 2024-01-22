@@ -18,10 +18,19 @@ igualResta.addEventListener('click', () => {
 })
 
 //TODO MULTIPLICACION
-
-
-
-
-
+let igualMulti = document.getElementById('multiplicar');
+let resultadoMulti = document.getElementById('resultadoMulti');
+igualMulti.addEventListener('click', () => {
+    let aMulti = parseFloat(document.getElementById('multiA').value);
+    let bMulti = parseFloat(document.getElementById('multiB').value);
+    resultadoMulti.innerHTML = `${JSON.stringify(aMulti * bMulti)}`;
+})
 
 //TODO DIVISION
+let igualDivi = document.getElementById('dividir');
+let resultadoDivi = document.getElementById('resultadoDivi');
+igualDivi.addEventListener('click', () => {
+    let aDivi = parseFloat(document.getElementById('diviA').value);
+    let bDivi = parseFloat(document.getElementById('diviB').value);
+    resultadoDivi.innerHTML = `${JSON.stringify(aDivi * bDivi)}`;
+})
