@@ -9,7 +9,7 @@
   <title>Calculadora</title>
 </head>
 
-<body class="modoClaro">
+<body>
   <header class="d-flex justify-content-center headerTitulo">
     <h1>Aplicación Calculadora</h1>
     <label class="switch">
@@ -17,58 +17,99 @@
       <span class="slider"></span>
     </label>
   </header>
-  <main>
-    <div class="container sumarContainer">
-      <header class="cssanimation danceTop d-flex justify-content-center">
-        <h1>SUMAR</h1>
-      </header>
-      <div class="d-flex justify-content-center">
-        <input type="number" placeholder="A" class="operadorSuma" id="sumaA">
-        <h2 class="signo">+</h2>
-        <input type="number" placeholder="B" class="operadorSuma" id="sumaB">
-        <button id="sumar">=</button>
-        <span id="resultadoSuma"></span>
-      </div>
-    </div>
 
-    <div class="container restaContainer">
-      <header class="cssanimation pepe d-flex justify-content-center">
-        <h1>RESTA</h1>
+  <main class="d-flex">
+    <div class="historial col-1">
+      <header>
+        <h2>Historial</h2>
       </header>
-      <div class="d-flex justify-content-center">
-        <input type="number" id="restaA" placeholder="A">
-        <h2 class="signoBlanco">-</h2>
-        <input type="number" id="restaB" placeholder="B">
-        <button id="restar">=</button>
-        <span id="resultadoResta"></span>
-      </div>
-    </div>
+      <section>
+        <div id="sumaHistorial">
+          <h2 class="h2Historial">Suma</h2>
+          <div>
+            <ul id="listaHistorialSuma">
 
-    <div class="container multiContainer">
-      <header class="cssanimation leScaleYIn sequence d-flex justify-content-center">
-        <h1>MULTIPLICACION</h1>
-      </header>
-      <div class="d-flex justify-content-center">
-        <input type="number" id="multiA" placeholder="A">
-        <h2 class="signoBlanco">X</h2>
-        <input type="number" id="multiB" placeholder="B">
-        <button id="multiplicar">=</button>
-        <span id="resultadoMulti"></span>
-      </div>
-    </div>
+            </ul>
+            <div id="buttonSuma">
 
-    <div class="container diviContainer">
-      <header class="cssanimation hu__hu__ d-flex justify-content-center mb-3">
-        <h1>DIVISIÓN</h1>
-      </header>
-      <div class="d-flex justify-content-center">
-        <input type="number" id="diviA" placeholder="A">
-        <h2 class="signo">/</h2>
-        <input type="number" id="diviB" placeholder="B">
-        <button id="dividir">=</button>
-        <span id="resultadoDivi"></span>
-      </div>
+            </div>
+          </div>
+        </div>
+        <div id="restaHistorial">
+          <h2 class="h2Historial">Resta</h2>
+          <div id="listaHistorialResta">
+
+          </div>
+        </div>
+        <div id="multiHistorial">
+          <h2 class="h2Historial">Multiplicacion</h2>
+          <div id="listaHistorialMulti">
+
+          </div>
+        </div>
+        <div id="diviHistorial">
+          <h2 class="h2Historial">División</h2>
+          <div id="listaHistorialDivi">
+
+          </div>
+        </div>
+      </section>
+
     </div>
+    <section class="container col-11">
+      <div class="container sumarContainer">
+        <header class="cssanimation danceTop d-flex justify-content-center">
+          <h1>SUMAR</h1>
+        </header>
+        <div class="d-flex justify-content-center">
+          <input type="number" placeholder="A" class="operadorSuma" id="sumaA">
+          <h2 class="signo">+</h2>
+          <input type="number" placeholder="B" class="operadorSuma" id="sumaB">
+          <button id="sumar">=</button>
+          <span id="resultadoSuma"></span>
+        </div>
+      </div>
+
+      <div class="container restaContainer">
+        <header class="cssanimation pepe d-flex justify-content-center">
+          <h1>RESTA</h1>
+        </header>
+        <div class="d-flex justify-content-center">
+          <input type="number" id="restaA" placeholder="A">
+          <h2 class="signoBlanco">-</h2>
+          <input type="number" id="restaB" placeholder="B">
+          <button id="restar">=</button>
+          <span id="resultadoResta"></span>
+        </div>
+      </div>
+
+      <div class="container multiContainer">
+        <header class="cssanimation leScaleYIn sequence d-flex justify-content-center">
+          <h1>MULTIPLICACION</h1>
+        </header>
+        <div class="d-flex justify-content-center">
+          <input type="number" id="multiA" placeholder="A">
+          <h2 class="signoBlanco">X</h2>
+          <input type="number" id="multiB" placeholder="B">
+          <button id="multiplicar">=</button>
+          <span id="resultadoMulti"></span>
+        </div>
+      </div>
+
+      <div class="container diviContainer">
+        <header class="cssanimation hu__hu__ d-flex justify-content-center mb-3">
+          <h1>DIVISIÓN</h1>
+        </header>
+        <div class="d-flex justify-content-center">
+          <input type="number" id="diviA" placeholder="A">
+          <h2 class="signo">/</h2>
+          <input type="number" id="diviB" placeholder="B">
+          <button id="dividir">=</button>
+          <span id="resultadoDivi"></span>
+        </div>
+      </div>
+    </section>
+
   </main>
   <footer>
 

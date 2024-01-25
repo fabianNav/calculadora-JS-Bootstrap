@@ -1,11 +1,40 @@
 
 //TODO SUMA
+let historialSuma = document.getElementById('sumaHistorial');
+let listaHistorialSuma = document.getElementById('listaHistorialSuma');
+let arrayHistorialSuma = [];
 let igual = document.getElementById('sumar');
 let resultadoSuma = document.getElementById('resultadoSuma');
+let buttonLimpiarSuma = document.getElementById('buttonSuma');
 igual.addEventListener('click', () => {
     let aSuma = parseFloat(document.getElementById('sumaA').value);
     let bSuma = parseFloat(document.getElementById('sumaB').value);
     resultadoSuma.innerHTML = `${JSON.stringify(aSuma + bSuma)}`;
+    arrayHistorialSuma.push(`${aSuma} + ${bSuma} = ${Number(aSuma) + Number(bSuma)}`);
+    Guardar();
+})
+
+//! Historial de la suma
+const Guardar = () => {
+    localStorage.setItem('historial', JSON.stringify(arrayHistorialSuma));
+}
+const renderSuma = () => {
+    listaHistorialSuma.innerHTML = ''
+    arrayHistorialSuma = JSON.parse(localStorage.getItem('historial'));
+    if(arrayHistorialSuma === null) {
+        historialSuma = [];
+    } else {
+        arrayHistorialSuma.map(h => {
+            listaHistorialSuma.innerHTML += `<li class='liSuma'>${h}</li>`;
+        });
+    }
+}
+historialSuma.addEventListener('click', () => {
+    renderSuma()
+    buttonLimpiarSuma.innerHTML = '<button id="limpiarSuma">Limpiar</button>'
+});
+buttonLimpiarSuma.addEventListener('click', () => {
+    localStorage.clear('historial');
 })
 
 //TODO RESTA
@@ -43,7 +72,7 @@ const setTheme = (tema) => {
     localStorage.setItem('theme', tema);
 }
 slider.addEventListener('click', () => {
-                        //obtenemos de lS el theme y si el theme es igual a dark entonces pasamos a usar light y viceversa
+    //obtenemos de lS el theme y si el theme es igual a dark entonces pasamos a usar light y viceversa
     let switchToTheme = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
     setTheme(switchToTheme);
 })

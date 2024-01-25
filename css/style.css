@@ -290,3 +290,54 @@ body {
 .headerTitulo {
     background-color: var(--primary);
 }
+.switch {
+    margin-left: 50px;
+    margin-top: 9px;
+}
+
+/* //TODO HISTORIAL */
+.historial.col-1 {
+    margin-top: 20px;
+    margin-left: 15px;
+    border: 3px solid var(--primary);
+    height: fit-content;
+    width: auto;
+    background-color: var(--primary);
+}
+.historial.col-1 header {
+    background-color: var(--primary);
+}
+.historial.col-1 section {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+}
+.h2Historial {
+    cursor: pointer;
+    margin-bottom: 8px;
+    border-top: 2px solid var(--primary);
+}
+#listaHistorialSuma {
+    padding: 0px;
+    list-style: none;
+    width: 100%;
+}
+.liSuma {
+    border-top: 1px solid var(--primary);
+    border-bottom: 1px solid var(--primary);
+    list-style: none;
+    display: block;
+}
+#limpiarSuma {
+    background-color: var(--background);
+    border: 1px solid var(--primary);
+    color: var(--text);
+    margin-left: 3px;
+    border-radius: 5px;
+    padding: 1px;
+}
+#limpiarSuma:hover {
+    background-color: var(--primary);
+    border: 1px solid var(--background);
+    color: var(--background);
+}
