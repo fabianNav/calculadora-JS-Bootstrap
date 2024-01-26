@@ -21,7 +21,7 @@ const Guardar = () => {
 const renderSuma = () => {
     listaHistorialSuma.innerHTML = ''
     arrayHistorialSuma = JSON.parse(localStorage.getItem('historial'));
-    if(arrayHistorialSuma === null) {
+    if (arrayHistorialSuma === null) {
         historialSuma = [];
     } else {
         arrayHistorialSuma.map(h => {
@@ -34,34 +34,128 @@ historialSuma.addEventListener('click', () => {
     buttonLimpiarSuma.innerHTML = '<button id="limpiarSuma">Limpiar</button>'
 });
 buttonLimpiarSuma.addEventListener('click', () => {
-    localStorage.clear('historial');
+    if(window.confirm('¿Estas seguro que quieres limpiar el historial de la suma?')) {
+        localStorage.removeItem('historial');
+        renderSuma();
+    }
 })
 
 //TODO RESTA
+let historialResta = document.getElementById('restaHistorial');
+let listaHistorialResta = document.getElementById('listaHistorialResta');
+let arrayHistorialResta = [];
 let igualResta = document.getElementById('restar');
 let resultadoResta = document.getElementById('resultadoResta');
+let buttonResta = document.getElementById('buttonResta');
 igualResta.addEventListener('click', () => {
     let aResta = parseFloat(document.getElementById('restaA').value);
     let bResta = parseFloat(document.getElementById('restaB').value);
     resultadoResta.innerHTML = `${JSON.stringify(aResta - bResta)}`;
+    arrayHistorialResta.push(`${aResta} - ${bResta} = ${Number(aResta) - Number(bResta)}`);
+    GuardarResta();
+});
+//! Historial de la resta
+const GuardarResta = () => {
+    localStorage.setItem('Resta', JSON.stringify(arrayHistorialResta));
+}
+const renderResta = () => {
+    listaHistorialResta.innerHTML = ''
+    arrayHistorialResta = JSON.parse(localStorage.getItem('Resta'));
+    if (arrayHistorialResta === null) {
+        historialResta = [];
+    } else {
+        arrayHistorialResta.map(h => {
+            listaHistorialResta.innerHTML += `<li class='liResta'>${h}</li>`;
+        });
+    }
+}
+historialResta.addEventListener('click', () => {
+    renderResta()
+    buttonResta.innerHTML = '<button id="limpiarResta">Limpiar</button>'
+});
+buttonResta.addEventListener('click', () => {
+    if(window.confirm('¿Estas seguro que quieres limpiar el historial de la resta?')) {
+        localStorage.removeItem('Resta');
+        renderResta();
+    }
 })
 
 //TODO MULTIPLICACION
+let historialMulti = document.getElementById('multiHistorial');
+let listaHistorialMulti = document.getElementById('listaHistorialMulti');
+let arrayHistorialMulti = [];
+let buttonMulti = document.getElementById('buttonMulti');
 let igualMulti = document.getElementById('multiplicar');
 let resultadoMulti = document.getElementById('resultadoMulti');
 igualMulti.addEventListener('click', () => {
     let aMulti = parseFloat(document.getElementById('multiA').value);
     let bMulti = parseFloat(document.getElementById('multiB').value);
-    resultadoMulti.innerHTML = `${JSON.stringify(aMulti * bMulti)}`;
+    resultadoMulti.innerHTML = `${JSON.stringify(aMulti * bMulti)}`; arrayHistorialMulti.push(`${aMulti} X ${bMulti} = ${Number(aMulti) * Number(bMulti)}`);
+    GuardarMulti();
+});
+//! Historial de la resta
+const GuardarMulti = () => {
+    localStorage.setItem('Multiplicacion', JSON.stringify(arrayHistorialMulti));
+}
+const renderMulti = () => {
+    listaHistorialMulti.innerHTML = ''
+    arrayHistorialMulti = JSON.parse(localStorage.getItem('Multiplicacion'));
+    if (arrayHistorialMulti === null) {
+        historialMulti = [];
+    } else {
+        arrayHistorialMulti.map(h => {
+            listaHistorialMulti.innerHTML += `<li class='liMulti'>${h}</li>`;
+        });
+    }
+}
+historialMulti.addEventListener('click', () => {
+    renderMulti()
+    buttonMulti.innerHTML = '<button id="limpiarResta">Limpiar</button>'
+});
+buttonMulti.addEventListener('click', () => {
+    if(window.confirm('¿Estas seguro que quieres limpiar el historial de la multiplicacion?')) {
+        localStorage.removeItem('Multiplicacion');
+        renderMulti();
+    }
 })
 
 //TODO DIVISION
+let historialDivi = document.getElementById('diviHistorial');
+let listaHistorialDivi = document.getElementById('listaHistorialDivi');
+let arrayHistorialDivi = [];
+let buttonDivi = document.getElementById('buttonDivi');
 let igualDivi = document.getElementById('dividir');
 let resultadoDivi = document.getElementById('resultadoDivi');
 igualDivi.addEventListener('click', () => {
     let aDivi = parseFloat(document.getElementById('diviA').value);
     let bDivi = parseFloat(document.getElementById('diviB').value);
-    resultadoDivi.innerHTML = `${JSON.stringify(aDivi / bDivi)}`;
+    resultadoDivi.innerHTML = `${JSON.stringify(aDivi / bDivi)}`; arrayHistorialDivi.push(`${aDivi} / ${bDivi} = ${Number(aDivi) / Number(bDivi)}`);
+    GuardarDivi();
+});
+//! Historial de la resta
+const GuardarDivi = () => {
+    localStorage.setItem('Division', JSON.stringify(arrayHistorialDivi));
+}
+const renderDivi = () => {
+    listaHistorialDivi.innerHTML = ''
+    arrayHistorialDivi = JSON.parse(localStorage.getItem('Division'));
+    if (arrayHistorialDivi === null) {
+        historialDivi = [];
+    } else {
+        arrayHistorialDivi.map(h => {
+            listaHistorialDivi.innerHTML += `<li class='liDivi'>${h}</li>`;
+        });
+    }
+}
+historialDivi.addEventListener('click', () => {
+    renderDivi()
+    buttonDivi.innerHTML = '<button id="limpiarResta">Limpiar</button>'
+});
+buttonDivi.addEventListener('click', () => {
+    if(window.confirm('¿Estas seguro que quieres limpiar el historial de la division?')) {
+        localStorage.removeItem('Division');
+        renderDivi();
+    }
 })
 
 //TODO MODO OSCURO
