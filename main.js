@@ -172,4 +172,25 @@ slider.addEventListener('click', () => {
 })
 setTheme(localStorage.getItem('theme') || preferedColorScheme);
 
+//TODO eventos especiales
+let fecha = new Date();
+let dia = fecha.getDate();
+let mes = fecha.getMonth() + 1;
+let cuerpo = document.getElementById('todo');
+//? NAVIDAD
+if(dia == 25 || dia == 24 && mes == 12) {
+    cuerpo.classList.add('navidad');
+    window.alert('FELIZ NAVIDAAAAAAAD');
+} else if( dia !== 24 || dia !== 25 && mes !== 12){
+    cuerpo.classList.remove('navidad');
+};
+//? HALLOWEEN
+if(dia == 31 && mes == 10) {
+    cuerpo.classList.add('halloween');
+    window.alert('FELIZ HALLOWEEN');
+} else if( dia !== 24 || dia !== 25 && mes !== 12){
+    cuerpo.classList.remove('halloween');
+};
+
+
 
