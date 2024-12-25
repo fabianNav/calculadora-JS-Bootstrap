@@ -519,7 +519,25 @@ body {
 .navidad {
     background-image: url(../public/regalos-navidad-plano.png);
 }
+
 .halloween {
     background-image: url(../public/escena-halloween-hd-calabazas-murcielagos-luna-llena-fondo.png);
 }
 
+.navidadSuma {
+    background-image: url(../public/contenedores-bg/19506715_6125770.png);
+    color: #000;
+}
+
+.navidadResta {
+    background-image: url(../public/contenedores-bg/christmas-4697165_640.png);
+    color: #000;
+}
+
+.navidadMulti {
+    background-image: url(../public/contenedores-bg/christmas-4697165_641.png);
+}
+
+.navidadDivi {
+    background-image: url(../public/contenedores-bg/christmas-4697165_642.png);
+}

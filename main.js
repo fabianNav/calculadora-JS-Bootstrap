@@ -177,12 +177,24 @@ let fecha = new Date();
 let dia = fecha.getDate();
 let mes = fecha.getMonth() + 1;
 let cuerpo = document.getElementById('todo');
+let sumaContainer = document.getElementById('contenedorSuma');
+let restaContainer = document.getElementById('contenedorResta');
+let multiContainer = document.getElementById('contenedorMulti');
+let diviContainer = document.getElementById('contenedorDivi');
 //? NAVIDAD
 if(dia == 25 || dia == 24 && mes == 12) {
     cuerpo.classList.add('navidad');
     window.alert('FELIZ NAVIDAAAAAAAD');
+    sumaContainer.classList.add('navidadSuma');
+    restaContainer.classList.add('navidadResta');
+    multiContainer.classList.add('navidadMulti');
+    diviContainer.classList.add('navidadDivi');
 } else if( dia !== 24 || dia !== 25 && mes !== 12){
     cuerpo.classList.remove('navidad');
+    sumaContainer.classList.remove('navidadSuma');
+    restaContainer.classList.remove('navidadResta');
+    multiContainer.classList.remove('navidadMulti');
+    diviContainer.classList.remove('navidadDivi');
 };
 //? HALLOWEEN
 if(dia == 31 && mes == 10) {
